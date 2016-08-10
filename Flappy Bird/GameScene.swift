@@ -58,6 +58,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             bird.physicsBody!.velocity = CGVectorMake(0, 0)
             bird.physicsBody?.applyImpulse(CGVectorMake(0, 50))
         } else {
+            timer.invalidate()
             bird.physicsBody!.allowsRotation = false
             score = 0
             scoreLabel.text = "0"
